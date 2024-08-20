@@ -1,3 +1,10 @@
+# TODO
+1. Add Auto [generate](https://openchakra.app/) of forms using prisma schema
+2. Use [chaibuilder](https://chaibuilder.com/) as example to build pages also has a better tree view and properties section 
+3. Use openchakra as an example to generate the code section
+4. Use Dynamics Dataverse as an example to auto generate fields for form from data but not add them to the form
+
+
+## Links
 ## https://reactsvgicons.com/search?q=button
-# https://www.youtube.com/watch?v=QGXUUXy0AMw&t=265s
-## https://github.com/Adit0507/Form-Builder/blob/master/components/FormElements.tsx
+##https://github.com/vantezzen/auto-form
