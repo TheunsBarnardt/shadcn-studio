@@ -25,7 +25,6 @@ import SaveFormBtn from "./SaveFormBtn";
 
 
 const FormBuilder = ({ form }: { form: Form }) => {
-  debugger;
   const { setElements, setSelectedElement } = useDesigner();
   const [isReady, setIsReady] = useState(false);
 

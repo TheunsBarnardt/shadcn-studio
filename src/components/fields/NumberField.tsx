@@ -17,7 +17,7 @@ import { Switch } from "../ui/switch";
 const type: ElementsType = "NumberField";
 
 const extraAttributes = {
-  label: "Number field",
+  label: "Number",
   helperText: "Helper text",
   required: false,
   placeHolder: "0",
@@ -39,7 +39,7 @@ export const NumberFieldFormElement: FormElement = {
   }),
   designerBtnElement: {
     icon: Bs123,
-    label: "Number Field",
+    label: "Number",
   },
   designerComponent: DesignerComponent,
   formComponent: FormComponent,

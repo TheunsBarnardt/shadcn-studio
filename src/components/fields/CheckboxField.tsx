@@ -31,7 +31,7 @@ import { Checkbox } from "../ui/checkbox";
 const type: ElementsType = "CheckboxField";
 
 const extraAttributes = {
-  label: "Checkbox field",
+  label: "Checkbox",
   helperText: "Helper text",
   required: false,
 };
@@ -51,7 +51,7 @@ export const CheckboxFieldFormElement: FormElement = {
   }),
   designerBtnElement: {
     icon: IoMdCheckbox,
-    label: "CheckBox Field",
+    label: "CheckBox",
   },
   designerComponent: DesignerComponent,
   formComponent: FormComponent,

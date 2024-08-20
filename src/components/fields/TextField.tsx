@@ -53,7 +53,7 @@ export const TextFieldFormElement: FormElement = {
 
   designerBtnElement: {
     icon: MdTextFields,
-    label: "Text Field",
+    label: "Text",
   },
 
   designerComponent: DesignerComponent,

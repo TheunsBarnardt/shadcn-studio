@@ -5,7 +5,6 @@ import { DesignerContext } from "../context/DesignerContext";
 
 const useDesigner = () => {
   const context = useContext(DesignerContext)
-debugger;
   if(!context){
       throw new Error("useDesigner must be used within DesignerContext")
   }

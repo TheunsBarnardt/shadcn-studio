@@ -37,11 +37,17 @@ import { Separator } from "../ui/separator";
 import { Button } from "../ui/button";
 import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
 import { toast } from "../ui/use-toast";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 const type: ElementsType = "SelectField";
 
 const extraAttributes = {
-  label: "Select field",
+  label: "Select",
   helperText: "Helper text",
   required: false,
   placeHolder: "Value here...",
@@ -65,7 +71,7 @@ export const SelectFieldFormElement: FormElement = {
   }),
   designerBtnElement: {
     icon: RxDropdownMenu,
-    label: "Select Field",
+    label: "Select",
   },
   designerComponent: DesignerComponent,
   formComponent: FormComponent,
@@ -223,27 +229,33 @@ function PropertiesComponent({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(applyChanges)} className="space-y-3">
+      <form onSubmit={form.handleSubmit(applyChanges)} className="space-y-1">
         <FormField
           control={form.control}
           name="label"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Label</FormLabel>
-              <FormControl>
-                <Input
-                  {...field}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") e.currentTarget.blur();
-                  }}
-                />
-              </FormControl>
-              <FormDescription>
-                The label of the field. <br /> It will be displayed above the
-                field
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                </TooltipTrigger>
+                  <FormItem>
+                    <FormLabel className="text-sm text-muted-foreground">Label</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") e.currentTarget.blur();
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                <TooltipContent>
+                  The label of the field. <br /> It will be displayed above the
+                  field
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           )}
         />
         <FormField
@@ -251,7 +263,7 @@ function PropertiesComponent({
           name="placeHolder"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>PlaceHolder</FormLabel>
+              <FormLabel className="text-sm text-muted-foreground">PlaceHolder</FormLabel>
               <FormControl>
                 <Input
                   {...field}
@@ -294,7 +306,7 @@ function PropertiesComponent({
           render={({ field }) => (
             <FormItem>
               <div className="flex justify-between items-center">
-                <FormLabel>Options</FormLabel>
+                <FormLabel className="text-sm text-muted-foreground">Options</FormLabel>
                 <Button
                   variant={"outline"}
                   className="gap-2"
@@ -352,7 +364,7 @@ function PropertiesComponent({
           render={({ field }) => (
             <FormItem className="flex items-center justify-between rounded-lg border p-3 shadow-sm">
               <div className="space-y-0.5">
-                <FormLabel>Required</FormLabel>
+                <FormLabel className="text-sm text-muted-foreground">Required</FormLabel>
                 <FormDescription>
                   The helper text of the field. <br />
                   It will be displayed below the field.

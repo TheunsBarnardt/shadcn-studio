@@ -26,7 +26,6 @@ export default function DesignerContextProvider({
 }: {
   children: ReactNode;
 }) {
-  debugger;
   const [elements, setElements] = useState<FormElementInstance[]>([]);
   const [selectedElement, setSelectedElement] =
     useState<FormElementInstance | null>(null);

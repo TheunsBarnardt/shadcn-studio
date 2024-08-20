@@ -20,7 +20,7 @@ export const SeparatorFieldFormElement: FormElement = {
 
   designerBtnElement: {
     icon: RiSeparator,
-    label: "Separator Field",
+    label: "Separator",
   },
 
   designerComponent: DesignerComponent,

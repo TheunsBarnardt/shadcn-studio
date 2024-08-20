@@ -25,7 +25,7 @@ import { LuHeading2 } from "react-icons/lu";
 const type: ElementsType = "SubTitleField";
 
 const extraAttributes = {
-  title: "SubTitle field",
+  title: "SubTitle",
 };
 
 const propertiesSchema = z.object({

@@ -10,6 +10,8 @@ import { TextAreaFormElement } from "../fields/TextAreaField";
 import { DateFieldFormElement } from "../fields/DateField";
 import { SelectFieldFormElement } from "../fields/SelectField";
 import { CheckboxFieldFormElement } from "../fields/CheckboxField";
+import { TestCodeBlockElement } from "../fields/TestCodeBlock";
+
 
 
 export type ElementsType =
@@ -24,6 +26,7 @@ export type ElementsType =
   | "DateField"
   | "SelectField"
   | "CheckboxField"
+  | "TestCodeBlock"
   ;
 
 export type FormElementInstance = {
@@ -75,5 +78,6 @@ export const FormElements: FormElementsType = {
   TextAreaField: TextAreaFormElement,
   DateField: DateFieldFormElement,
   SelectField: SelectFieldFormElement,
-  CheckboxField: CheckboxFieldFormElement
+  CheckboxField: CheckboxFieldFormElement,
+  TestCodeBlock: TestCodeBlockElement,
 };

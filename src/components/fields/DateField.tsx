@@ -43,7 +43,7 @@ export const DateFieldFormElement: FormElement = {
   }),
   designerBtnElement: {
     icon: BsFillCalendarDateFill,
-    label: "Date Field",
+    label: "Date",
   },
   designerComponent: DesignerComponent,
   formComponent: FormComponent,
